@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
         rel="stylesheet" />
@@ -45,7 +44,7 @@
                     <div class="navLinks" id="navLinks">
                         <a href="#">Home</a>
                         <a href="#about-section">About</a>
-                        <a href="#Skills">Skills</a></li>
+                        <a href="#Skills">Skills</a>
                         <a href="#experience">Experience</a>
                         <a href="#pro">Projects</a>
                     </div>
@@ -231,8 +230,8 @@
                     <li>Designed and developed WordPress websites tailored to clients' needs.</li>
                     <li>Provided ongoing website maintenance and support.</li>
                 </ul>
-                </>
             </div>
+        </div>
     </section>
 
     <section class="pro" id="pro">
@@ -378,7 +377,7 @@
                     </div>
                 </div>
                 <div class="right-section">
-                    <form onsubmit="emailSend(); reset(); return false;">
+                    <form onsubmit="emailSend(); this.reset(); return false;">
                         <div class="form-group">
                             <label for="name">What's your name:</label>
                             <input type="text" id="name" name="name" required>
@@ -436,18 +435,36 @@
             });
         });
     </script>
-    <script src="gsap.min.js"></script>
+    <!-- GSAP, Scroll, etc (no issue here) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="Contact form to email.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="script.js"></script>
+
+    <!-- SweetAlert MUST be loaded before your script -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- EmailJS MUST be loaded before your script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init({
+            publicKey: "QbahimZpuaCG8xtt6"
+        });
+
+    </script>
+
+    <!-- NOW load your form email JS -->
+    <script src="Contact-form-to-email.js"></script>
+
+    <!-- Last load your theme script -->
+    <script src="script.js"></script>
+
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
+
 </body>
 
 <footer class="main-footer">
