@@ -534,6 +534,12 @@ button {
   border-radius: 5px;
 }
 
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
 .center-content h2 {
   padding: 10px;
   font-size: 2rem;
