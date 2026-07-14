@@ -1,104 +1,81 @@
-// for progress bar
 const progressBar = document.getElementById("progressBar");
+const siteHeader = document.getElementById("siteHeader");
+const navToggle = document.getElementById("navToggle");
+const mobilePanel = document.getElementById("mobilePanel");
+const navLinks = document.querySelectorAll(".nav-links a, .mobile-panel a");
+const sections = [...document.querySelectorAll("section[id]")];
+
+const updateProgress = () => {
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+  progressBar.style.transform = `scaleX(${progress})`;
+};
+
+const updateHeader = () => {
+  siteHeader.classList.toggle("scrolled", window.scrollY > 24);
+};
+
 window.addEventListener("scroll", () => {
-  const scrollPercentage =
-    (window.scrollY /
-      (document.documentElement.scrollHeight - window.innerHeight)) *
-    100;
-  progressBar.style.height = `${scrollPercentage}%`;
+  updateProgress();
+  updateHeader();
+}, { passive: true });
+
+window.addEventListener("resize", updateProgress);
+updateProgress();
+updateHeader();
+
+navToggle?.addEventListener("click", () => {
+  const isOpen = mobilePanel.classList.toggle("open");
+  document.body.classList.toggle("nav-open", isOpen);
+  siteHeader.classList.toggle("menu-open", isOpen);
+  navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-// for smooth scrolling of links 
-// Select all links with href starting with '#'
-const navLinks = document.querySelectorAll('a[href^="#"]');
-navLinks.forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetId);
-    targetSection.scrollIntoView({
-      behavior: 'smooth'
-    });
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobilePanel?.classList.remove("open");
+    document.body.classList.remove("nav-open");
+    siteHeader.classList.remove("menu-open");
+    navToggle?.setAttribute("aria-expanded", "false");
   });
 });
 
-// Animations for the humburger in the hero section
-const nl = document.getElementById('navLinks')
-const humburger = document.querySelector('.humburger')
-const humLineEl = document.querySelectorAll('.humLine')
-let toggle = true
+const setActiveLink = () => {
+  const current = sections
+    .filter((section) => section.getBoundingClientRect().top <= 120)
+    .at(-1);
 
-humburger.addEventListener('click', () => {
-  if (toggle) {
-    nl.style.left = 0
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.classList.toggle("active", current && link.getAttribute("href") === `#${current.id}`);
+  });
+};
 
-  }
-  else {
-    nl.style.left = '-100%'
-  }
-  toggle = !toggle;
+window.addEventListener("scroll", setActiveLink, { passive: true });
+setActiveLink();
 
-  humLineEl.forEach(item => {
-    item.classList.toggle('hb')
-  })
-})
+const revealElements = [...document.querySelectorAll(".reveal")];
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// for project section click on me button
-function moveText(event) {
-  const card = event.currentTarget;
-  const hoverText = card.querySelector('.hover-text');
+if (prefersReducedMotion) {
+  revealElements.forEach((element) => element.classList.add("reveal-in"));
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-in");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
 
-  // Calculate relative position within the card
-  const x = event.clientX - card.getBoundingClientRect().left;
-  const y = event.clientY - card.getBoundingClientRect().top;
-
-  // Update the position of the hover text
-  hoverText.style.left = `${x}px`;
-  hoverText.style.top = `${y}px`;
+  revealElements.forEach((element) => revealObserver.observe(element));
 }
 
-
-// For skills section animation on hover
-const skills = document.querySelectorAll(".skill span");
-const tl = gsap.timeline({ paused: true }); // Pause the timeline initially
-skills.forEach((text, index) => {
-  text.parentNode.addEventListener("mouseenter", () => {
-    gsap.to(text, {
-      x: 0,
-      y: 0,
-      opacity: 1, 
-      duration: 0.2,
-      repeat: 5,
-      yoyo: true,
-    });
-  });
-
-  text.parentNode.addEventListener("mousemove", (event) => {
-    const rect = text.parentNode.getBoundingClientRect();
-    const relX = event.clientX - rect.left - rect.width / 2;
-    const relY = event.clientY - rect.top - rect.height / 2;
-    const angle = Math.atan2(relY, relX);
-    const maxRadius = (rect.width / 2) - (text.offsetWidth / 2);
-    const x = maxRadius * Math.cos(angle);
-    const y = maxRadius * Math.sin(angle);
-    
-    gsap.to(text, {
-      x: x,
-      y: y,
-      duration: 0.2,
-    });
-  });
-
-  text.parentNode.addEventListener("mouseleave", () => {
-    gsap.to(text, {
-      x: 0,
-      y: 0,
-      duration: 0.2,
-    });
-  });
-});
-
-const skillsSection = document.getElementById("Skills");
-skillsSection.addEventListener("mouseover", () => {
-  tl.play(); // Play the GSAP timeline when you hover over the section
+document.addEventListener("visibilitychange", () => {
+  document.title = document.hidden
+    ? "Karan Kumar - Web Developer"
+    : "Karan Kumar - Web Developer";
 });

@@ -2,532 +2,924 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Karan Kumar is a web developer in New Delhi building custom websites, CMS platforms, eCommerce stores, and conversion-focused digital experiences.">
+    <meta name="author" content="Karan Kumar">
+    <link rel="canonical" href="https://karankr.netlify.app/">
+    <meta property="og:title" content="Karan Kumar - Web Developer">
+    <meta property="og:description"
+        content="Custom websites, CMS platforms, eCommerce stores, and interactive web experiences by Karan Kumar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karankr.netlify.app/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Karan Kumar - Web Developer">
+    <meta name="twitter:description"
+        content="Custom websites, CMS platforms, eCommerce stores, and interactive web experiences by Karan Kumar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
-    <link rel="icon" href="/Images/profile-pic.png" type="image/x-icon">
-    <title>Karan Kr.</title>
+    <link rel="icon" href="Images/profile-pic.png" type="image/x-icon">
+    <title>Karan Kumar - Web Developer</title>
 </head>
 
-<script>
-    document.addEventListener("visibilitychange", function () {
-        if (document.hidden) {
-            document.title = "Come back ;";
-        } else {
-            document.title = "Karan Kr.";
-        }
-    });
-</script>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
 
-<body oncontextmenu="return false;">
+    <header class="site-header" id="siteHeader">
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="#top" class="brand" aria-label="Karan Kumar home">
+                <span class="brand-mark">kk</span>
+                <span class="brand-name">Karan Kumar</span>
+            </a>
 
-    <!--<body>-->
-    <div id="progressBar" class="progressBar"></div>
+            <div class="nav-links" id="navLinks">
+                <a href="#work">Work</a>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#stack">Stack</a>
+                <a href="#experience">Experience</a>
+                <a href="#process">Process</a>
+            </div>
 
-    <header>
-        <div class="container">
-            <nav class="flex items-centre justify-between">
-                <div class="left flex justfiy-start">
-                    <!-- <div class="logo"> <img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="50px" alt="logo"> </div> -->
-                    <div class="humburger" id="humburger">
-                        <div class="humLine"></div>
-                        <div class="humLine"></div>
-                        <div class="humLine"></div>
-                    </div>
-                    <div class="navLinks" id="navLinks">
-                        <a href="#">Home</a>
-                        <a href="#about-section">About</a>
-                        <a href="#Skills">Skills</a>
-                        <a href="#experience">Experience</a>
-                        <a href="#pro">Projects</a>
-                    </div>
-                </div>
-                <div class="right">
-                    <button class="btn btn-primary" id="scrollToContact">Contact</button>
-                </div>
-            </nav>
+            <div class="nav-actions">
+                <a href="#contact" class="nav-cta">Get in touch</a>
+                <button class="menu-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="menu-open">==</span>
+                    <span class="menu-close">x</span>
+                </button>
+            </div>
+        </nav>
 
+        <div class="mobile-panel" id="mobilePanel">
+            <a href="#work">Work</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#stack">Stack</a>
+            <a href="#experience">Experience</a>
+            <a href="#process">Process</a>
+            <a href="#contact" class="mobile-cta">Get in touch</a>
+        </div>
     </header>
-    <section class="hero">
-        <div class="left">
-            <img src="/Images/person.png">
-        </div>
-        <div class="right flex-1">
-            <h1>
-                I'm a Web
-            </h1>
-            <svg>
-                <text id="myText" y="50%" dy=".35em" text-anchor="middle">
-                    Developer
-                </text>
-            </svg>
-            <p>
-                As a web developer, I specialize in transforming ideas into engaging online experiences. I craft
-                elegant code to bring digital visions to life.
-            </p>
-            <div>
-                <a href="karan-kr-wp-resume.pdf" download>
-                    <button class="btn btn-secondary">Download Resume</button>
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <section class="about" id="about-section">
-        <div class="container">
-            <div class="aboutContainer">
-                <div data-aos="zoom-out-right" data-aos-delay="800" class="leftAbout">
-                    <img src="/Images/person-2.png" alt="profile pic" />
-                </div>
-                <div class="rightAbout about-trigger">
-                    <h1>About <span>Me</span></h1>
-                    <h3>Hello! I'm Karan Kr.</h3>
-                    <p>
-                        I’m a web developer passionate about transforming ideas into impactful digital experiences. With
-                        expertise in WordPress and Shopify, I specialize in crafting websites that blend creativity,
-                        functionality, and innovation. Always pushing boundaries, I stay ahead of web technologies to
-                        deliver exceptional solutions tailored to your needs.
+    <main>
+        <section class="hero" id="top">
+            <div class="blueprint" aria-hidden="true"></div>
+            <div class="hero-glow" aria-hidden="true"></div>
+
+            <div class="page-shell hero-grid">
+                <div class="hero-copy">
+                    <div class="availability-line">
+                        <span class="status-pill"><span></span>Open to full-time roles &amp; freelance</span>
+                        <span>New Delhi, India</span>
+                    </div>
+
+                    <h1>I build business<br>websites as<br><em>living systems.</em></h1>
+
+                    <p class="hero-text">
+                        I'm <strong>Karan Kumar</strong>, a web developer with 2+ years of professional experience
+                        building custom websites, CMS platforms, eCommerce storefronts, and digital systems that are
+                        practical to manage, polished for users, and ready for real business use.
                     </p>
-                    <div>
-                        <a href="Aboutme.html" target="_blank">
-                            <button class="btn btn-secondary">Know More About Me</button>
-                        </a>
-                        <!-- <div class="socials">
-                        <a href="#"><img
-                                src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                width="40px" /></a>
-                        <a href="#"><img
-                                src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                width="40px" /></a>
-                        <a href="#"><img
-                                src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                width="40px" /></a>
-                        <a href="#"><img
-                                src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                width="40px" /></a>
-                    </div> -->
+
+                    <div class="hero-actions">
+                        <a href="#work" class="button button-dark">View selected work</a>
+                        <a href="#contact" class="button button-outline">Get in touch</a>
+                    </div>
+                </div>
+
+                <div class="hero-console reveal">
+                    <div class="console-window">
+                        <div class="console-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p>karan@studio - deploy</p>
+                        </div>
+                        <div class="console-body">
+                            <div class="console-line">
+                                <span class="prompt">~ deploy</span>
+                                <span>conversion-ready storefront</span>
+                                <span class="tag">shopify</span>
+                                <span class="live">live</span>
+                            </div>
+                            <div class="console-line">
+                                <span class="prompt">~ build</span>
+                                <span>role-based client dashboard</span>
+                                <span class="tag">wordpress</span>
+                                <span class="live">live</span>
+                            </div>
+                            <div class="console-line">
+                                <span class="prompt">~ ship</span>
+                                <span>custom checkout integration</span>
+                                <span class="tag">shopify</span>
+                                <span class="live">live</span>
+                            </div>
+                            <div class="console-line console-cursor">
+                                <span class="prompt">~</span>
+                                <span>running performance pass</span>
+                                <span class="blink"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div>
+                            <strong>2+ yrs</strong>
+                            <span>professional experience</span>
+                        </div>
+                        <div>
+                            <strong>5 roles</strong>
+                            <span>intern to developer</span>
+                        </div>
+                        <div>
+                            <strong>CMS / Commerce</strong>
+                            <span>plus custom frontend</span>
+                        </div>
                     </div>
                 </div>
             </div>
-    </section>
 
-    <section class="skills" id="Skills">
-        <div class="container">
-            <h1 class="skills-head">Skills</h1>
-            <div class="skills-list">
-
-                <div data-aos="fade-right" data-aos-delay="0" class="skill">
-                    <i class="icon-wordpress"></i>
+            <div class="marquee" aria-label="Technical services">
+                <div>
                     <span>WordPress</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="100" class="skill">
-                    <i class="icon-shopify"></i>
-                    <span>Shopify</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="200" class="skill">
-                    <i class="icon-javascript"></i>
-                    <span>JavaScript</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="300" class="skill">
-                    <i class="icon-react"></i>
-                    <span>React</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="400" class="skill">
-                    <i class="icon-php"></i>
-                    <span>PHP</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="500" class="skill">
-                    <i class="icon-mysql"></i>
-                    <span>MySQL</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="600" class="skill">
-                    <i class="icon-html5"></i>
-                    <span>HTML</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="700" class="skill">
-                    <i class="icon-css3"></i>
-                    <span>CSS</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="800" class="skill">
-                    <i class="icon-bootstrap"></i>
-                    <span>Bootstrap</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="900" class="skill">
-                    <i class="icon-elementor"></i>
-                    <span>Elementor</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="1000" class="skill">
-                    <i class="icon-acf"></i>
-                    <span>ACF</span>
-                </div>
-
-                <div data-aos="fade-right" data-aos-delay="1100" class="skill">
-                    <i class="icon-shopify"></i>
+                    <b></b>
                     <span>Shopify Liquid</span>
+                    <b></b>
+                    <span>WooCommerce</span>
+                    <b></b>
+                    <span>ACF</span>
+                    <b></b>
+                    <span>PHP</span>
+                    <b></b>
+                    <span>Plugin Development</span>
+                    <b></b>
+                    <span>Theme Development</span>
+                    <b></b>
+                    <span>Elementor</span>
+                    <b></b>
+                    <span>JavaScript</span>
+                    <b></b>
+                    <span>MySQL</span>
+                    <b></b>
+                    <span>WHM / cPanel</span>
+                    <b></b>
+                    <span>CRO</span>
+                    <b></b>
+                    <span>WordPress</span>
+                    <b></b>
+                    <span>Shopify Liquid</span>
+                    <b></b>
+                    <span>WooCommerce</span>
+                    <b></b>
+                    <span>ACF</span>
+                    <b></b>
+                    <span>PHP</span>
+                    <b></b>
+                    <span>Plugin Development</span>
+                    <b></b>
+                    <span>Theme Development</span>
+                    <b></b>
+                    <span>Elementor</span>
+                    <b></b>
+                    <span>JavaScript</span>
+                    <b></b>
+                    <span>MySQL</span>
+                    <b></b>
+                    <span>WHM / cPanel</span>
+                    <b></b>
+                    <span>CRO</span>
+                    <b></b>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-border">
+            <div class="page-shell">
+                <div class="section-label">
+                    <span>01</span>
+                    <i></i>
+                    <p>Positioning</p>
                 </div>
 
-                <div data-aos="fade-right" data-aos-delay="1200" class="skill">
-                    <i class="icon-ai"></i>
-                    <span>AI Mockup Generation</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="experience" id="experience">
-        <div class="container">
-            <h1 class="experience-head">Experience</h1>
-
-            <div data-aos="fade-down-right" data-aos-delay="200" class="experience-item">
-                <h2>Web Developer - DI Infotech</h2>
-                <p class="experience-date">June 2025 - Present </p>
-                <ul class="experience-highlights">
-                    <li>Managing and customizing Shopify websites, including Liquid-based development and feature
-                        enhancements for client projects such as womancart.com.au and blluxe.com.</li>
-                    <li>Developing, maintaining, and providing AMC support for WordPress and PHP-based websites,
-                        including beetel.in, wdcindia.com, and flydheera.com, with custom functionality implementation
-                        and issue resolution.</li>
-                    <li>Handling server-level operations using WHM/cPanel, including website deployment, account setup,
-                        SSL installation, domain configuration, and client hosting management.</li>
-                    <li>Designing and generating AI-powered website mockups, UI concepts, and visual prototypes for both
-                        WordPress and Shopify projects, many of which have been successfully converted into fully
-                        functional live websites for production environments and client deployments.</li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-down-right" data-aos-delay="200" class="experience-item">
-                <h2>WordPress Developer - ContentHolic</h2>
-                <p class="experience-date">September 2024 - May 2025 </p>
-                <ul class="experience-highlights">
-                    <li>Developing and customizing WordPress websites for internal use and clients, using different
-                        themes and adding custom functionalities like programming SEO.</li>
-                    <li>Implementing SEO strategies and enhancing website performance through tailored design and custom
-                        features.</li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-down-left" data-aos-delay="400" class="experience-item">
-                <h2>WordPress Development Intern - Brain Quest Consultancy and Training</h2>
-                <p class="experience-date">May 2024 - August 2024</p>
-                <ul class="experience-highlights">
-                    <li>Developed custom WordPress websites from scratch for
-                        governmental and e-commerce clients.</li>
-                    <li>Collaborated with cross-functional teams to deliver high - quality websites. </li>
-                    <li>Handled diverse projects, ensuring compliance and optimizing user experience.</li>
-                    <li>Resolved complex technical issues, ensuring reliable and
-                        high-performing sites.</li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-down-right" data-aos-delay="500" class="experience-item">
-                <h2>Web Developer - AG Strategic</h2>
-                <p class="experience-date">February 2024 - April 2024</p>
-                <ul class="experience-highlights">
-                    <li>Developed and optimized Shopify e-commerce website, enhancing user experience and functionality.
-                    </li>
-                    <li>Collaborated closely with the design team to conceptualize and implement new features, enriching
-                        the website's design and usability.</li>
-                </ul>
-            </div>
-            <div data-aos="fade-down-left" data-aos-delay="600" class="experience-item">
-                <h2>Web Developer - Unusual Digital</h2>
-                <p class="experience-date">July 2023 - September 2023</p>
-                <ul class="experience-highlights">
-                    <li>During my internship, I created a WordPress plugin from scratch, showcasing my development
-                        skills.</li>
-                    <li>I also contributed to client projects by working on the Shopify platform, developing and
-                        enhancing their websites.</li>
-                    <li>Additionally, I gained valuable experience in WordPress by editing and customizing existing
-                        websites, further honing my proficiency in web development.</li>
-                </ul>
-            </div>
-            <div data-aos="fade-down-right" data-aos-delay="700" class="experience-item">
-                <h2>Freelance Web Developer</h2>
-                <p class="experience-date">January 2023 - present</p>
-                <ul class="experience-highlights">
-                    <!-- <li>Worked on a variety of web development projects for clients in different industries.</li> -->
-                    <li>Designed and developed WordPress websites tailored to clients' needs.</li>
-                    <li>Provided ongoing website maintenance and support.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="pro" id="pro">
-        <h2>Selected Projects</h2>
-        <div class="project-cards">
-            <a href="https://karan-weather-app.netlify.app/" class="project-card" target="_blank"
-                onmousemove="moveText(event)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="Images/weather app1.png" alt="Project 1">
-                        <h2></h2>
-                        <h3>Weather App</h3>
+                <div class="two-col">
+                    <div class="reveal">
+                        <h2>I build websites as business systems - structured for performance, conversion, and
+                            long-term control.</h2>
                     </div>
-                    <div class="card-back">
-                        <h2>Weather App</h2>
-                        <p> ✧ Developed a weather application using HTML, CSS, and
-                            JavaScript.<br>
-                            ✧ Integrated an API to fetch real-time weather data based on
-                            user input.<br>
-                            ✧ Implemented dynamic updates of weather conditions and
-                            forecasts
+
+                    <div class="body-copy reveal">
+                        <p>
+                            I work across custom HTML/CSS, JavaScript, WordPress, Shopify, WooCommerce, PHP, MySQL,
+                            Liquid, ACF, Elementor, and deployment workflows to turn business requirements into
+                            reliable digital products.
                         </p>
-                        <div class="hover-text">Click on me</div>
-                    </div>
-                </div>
-            </a>
-            <a href="https://karan-profile-card.netlify.app/" target="_blank" class="project-card"
-                onmousemove="moveText(event)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="Images/profile card.png" alt="Project 2">
-                        <h2></h2>
-                        <h3>Profile Card</h3>
-                    </div>
-                    <div class="card-back">
-                        <h2>Profile Card</h2>
-                        <p> ✧ Developed a profile card component using HTML, CSS, and
-                            JavaScript.<br>
-                            ✧ Designed an attractive card layout to showcase personal
-                            information.<br>
-                            ✧ Implemented interactivity, such as hover effects and click
-                            events.
+                        <p>
+                            My work covers custom themes, commerce templates, dashboards, plugin-level enhancements,
+                            responsive interfaces, Figma wireframes, AI-assisted website mockups, performance
+                            improvements, and server-side operations through WHM/cPanel.
                         </p>
-                        <div class="hover-text">Click on me</div>
-                    </div>
-                </div>
-            </a>
 
-            <a href="http://curd-operation-kk.infinityfreeapp.com/" target="_blank" class="project-card"
-                onmousemove="moveText(event)">
-                <div class="card-inner" onmousemove="moveText(event)">
-                    <div class="card-front">
-                        <img src="Images/curd.png" alt="Project 3">
-                        <h2></h2>
-                        <h3>Crud Operation</h3>
+                        <div class="position-grid">
+                            <article>
+                                <h3>Custom WordPress</h3>
+                                <p>Platforms, plugins, dashboards</p>
+                            </article>
+                            <article>
+                                <h3>Shopify + Liquid</h3>
+                                <p>CRO-first storefronts</p>
+                            </article>
+                            <article>
+                                <h3>Performance</h3>
+                                <p>Speed &amp; SEO optimization</p>
+                            </article>
+                            <article>
+                                <h3>Deployment</h3>
+                                <p>WHM/cPanel, SSL, hosting</p>
+                            </article>
+                        </div>
                     </div>
-                    <div class="card-back">
-                        <h2>Crud Operation</h2>
-                        <p> ✧ Created a responsive web application for CRUD operations using HTML, CSS, JavaScript, PHP,
-                            and MySQLi.<br>
-                            ✧ Designed an interactive and user-friendly interface for data management.<br>
-                            ✧ Ensured secure data handling by implementing validation and protection mechanisms.
-                        </p>
-                        <div class="hover-text">Click on me</div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="http://friendify.infinityfree.me/" target="_blank" class="project-card"
-                onmousemove="moveText(event)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="Images/Friendify.png" alt="Project 4">
-                        <h2></h2>
-                        <h3>Friendify</h3>
-                    </div>
-                    <div class="card-back">
-                        <h2>Your All-in-One Social Media Platform!</h2>
-                        <p> ✧ Created a dynamic social media platform using PHP, Bootstrap, JavaScript, HTML, and
-                            CSS.<br>
-                            ✧ Integrated advanced features for posting updates, private messaging, and profile
-                            customization.<br>
-                            ✧ Prioritized data security and user privacy through robust encryption and stringent
-                            measures.
-                        </p>
-                        <div class="hover-text">Click on me</div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-
-
-    <!--<section class="services">
-        <div class="container">
-            <h1 class="services-head">Services</h1>
-            <p>All your digital needs... covered.</p>
-            <div class="card-grid" id="Services">
-                <div class="card">
-                    <img src="https://source.unsplash.com/1600x900/?nature,water" />
-                    <h2>Website</h2>
-                    <p>
-                        I specialize in crafting captivating and responsive websites that
-                        cater to your unique needs. Let me turn your ideas into a stunning online reality.
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="https://source.unsplash.com/1600x900/?boy,men" />
-                    <h2>Project</h2>
-                    <p>
-                        I offer project management expertise to ensure the seamless execution of your digital ventures. From concept to delivery, I'll guide your project to success.
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="https://source.unsplash.com/1600x900/?car,bike" />
-                    <h2>Designer</h2>
-                    <p>
-                        My creative design skills transform concepts into engaging visuals. Whether it's logos, branding, or graphics, I design with flair.
-                    </p>
                 </div>
             </div>
-        </div>
-    </section> -->
+        </section>
 
-    <section class="get-in-touch" id="get-in-touch">
-        <div class="container">
-            <div class="center-content">
-                <h2>Get in Touch</h2>
-                <p>Have a project in mind or just want to say hello? Feel free to reach out to me. I'd love to
-                    hear from you!</p>
+        <section class="section section-border work-section" id="work">
+            <div class="page-shell">
+                <div class="section-label">
+                    <span>02</span>
+                    <i></i>
+                    <p>Selected Work</p>
+                </div>
+
+                <h2 class="section-heading reveal">Selected builds across immersive brand sites, commerce, and
+                    platforms.
+                </h2>
+                <p class="section-intro reveal">
+                    A focused look at projects where I led custom interface work, Shopify customization, WordPress
+                    platform development, responsive layouts, and production-ready implementation.
+                </p>
+
+                <div class="project-list">
+                    <article class="project-card reveal">
+                        <div class="project-index">
+                            <span>01</span>
+                            <i class="accent-emerald"></i>
+                        </div>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>WDC India</h3>
+                                <span>wdcindia.com</span>
+                            </div>
+                            <div class="project-meta">
+                                <span>Luxury Brand Website</span>
+                                <b>Lead development</b>
+                            </div>
+                            <p>
+                                Led the website build for The Wedding Design Company after studying the brand, service
+                                model, destination-led planning workflow, and premium event experience. Built a custom
+                                interactive hero where the illustrated WDC world becomes the navigation system, guiding
+                                users through services, destinations, design studio, media, about, and contact.
+                            </p>
+                            <p>
+                                Planned the interaction direction so the same concept can evolve into a Bharat-wide
+                                destination map, with hotspot-based journeys that help users explore wedding locations,
+                                services, and brand stories through a more immersive interface.
+                            </p>
+                            <div class="tags">
+                                <span>Lead Dev</span>
+                                <span>Interactive Hero</span>
+                                <span>Hotspots</span>
+                                <span>Brand UX</span>
+                            </div>
+                        </div>
+                        <a href="https://wdcindia.com/" target="_blank" rel="noreferrer"
+                            aria-label="Open WDC India">&nearr;</a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">
+                            <span>02</span>
+                            <i class="accent-clay"></i>
+                        </div>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>Womancart</h3>
+                                <span>womancart.com.au</span>
+                            </div>
+                            <div class="project-meta">
+                                <span>Shopify Store Customization</span>
+                                <b>Liquid development</b>
+                            </div>
+                            <p>
+                                Customized the Shopify storefront with Liquid-based section work, product-page
+                                refinements, and improved shopping flows to create a cleaner, more usable buying
+                                experience.
+                            </p>
+                            <div class="tags">
+                                <span>Shopify</span>
+                                <span>Liquid</span>
+                                <span>UX</span>
+                                <span>Templates</span>
+                            </div>
+                        </div>
+                        <a href="https://womancart.com.au/" target="_blank" rel="noreferrer"
+                            aria-label="Open Womancart">&nearr;</a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">
+                            <span>03</span>
+                            <i class="accent-lime"></i>
+                        </div>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>FIPOnline</h3>
+                                <span>fiponline.org</span>
+                            </div>
+                            <div class="project-meta">
+                                <span>Custom WordPress Platform</span>
+                                <b>Custom platform</b>
+                            </div>
+                            <p>
+                                Developed a custom WordPress platform with user registration, authentication,
+                                role-based dashboards, and a tailored login and management experience aligned with the
+                                platform workflow.
+                            </p>
+                            <div class="tags">
+                                <span>WordPress</span>
+                                <span>Auth</span>
+                                <span>Dashboards</span>
+                                <span>PHP</span>
+                            </div>
+                        </div>
+                        <a href="https://fiponline.org/" target="_blank" rel="noreferrer"
+                            aria-label="Open FIPOnline">&nearr;</a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">
+                            <span>04</span>
+                            <i class="accent-emerald"></i>
+                        </div>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>BLLUEX</h3>
+                                <span>blluex.com</span>
+                            </div>
+                            <div class="project-meta">
+                                <span>Shopify Store Redevelopment</span>
+                                <b>Store redevelopment</b>
+                            </div>
+                            <p>
+                                Rebuilt Shopify product-page templates in Liquid and integrated FastRR checkout,
+                                improving the store structure with clearer hierarchy, stronger trust signals, and a
+                                streamlined purchase path.
+                            </p>
+                            <div class="tags">
+                                <span>Shopify</span>
+                                <span>Checkout</span>
+                                <span>Templates</span>
+                                <span>Liquid</span>
+                            </div>
+                        </div>
+                        <a href="https://blluex.com/" target="_blank" rel="noreferrer"
+                            aria-label="Open BLLUEX">&nearr;</a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">
+                            <span>05</span>
+                            <i class="accent-clay"></i>
+                        </div>
+                        <div class="project-main">
+                            <div class="project-title">
+                                <h3>Beetel / Elan</h3>
+                                <span>beetel.in / elanlimited.com</span>
+                            </div>
+                            <div class="project-meta">
+                                <span>Enterprise Website Development</span>
+                                <b>Corporate development</b>
+                            </div>
+                            <p>
+                                Contributed to large-scale corporate WordPress builds with custom functionality,
+                                responsive layouts, structured content sections, and performance-minded implementation.
+                            </p>
+                            <div class="tags">
+                                <span>WordPress</span>
+                                <span>Enterprise</span>
+                                <span>Responsive</span>
+                                <span>Team</span>
+                            </div>
+                        </div>
+                        <a href="https://beetel.in/" target="_blank" rel="noreferrer"
+                            aria-label="Open Beetel">&nearr;</a>
+                    </article>
+                </div>
             </div>
-            <div class="get-in-touch-content">
-                <div class="left-section">
-                    <div class="contact-card">
-                        <img src="Images/contact1.png" alt="Handshake">
-                        <h2><br><b>Karan Kumar</b></h2>
-                        <p>Web Developer</p>
-                        <p>I am available to join your team and your projects!</p>
-                        <a href="mailto:kumarkaran02175@gmail.com" style="text-decoration: none; color: inherit;">Email:
-                            KumarKaran02175@gmail.com</a><br>
-                        <p>Phone: +919310168682</p>
+        </section>
+
+        <section class="section section-border" id="capabilities">
+            <div class="page-shell">
+                <div class="section-label">
+                    <span>03</span>
+                    <i></i>
+                    <p>Capabilities</p>
+                </div>
+
+                <div class="capability-grid">
+                    <article class="capability-card reveal">
+                        <span>01</span>
+                        <h3>Custom WordPress Development</h3>
+                        <p>Bespoke themes, ACF-driven content models, plugin enhancements, and dashboard flows designed
+                            for real client editing and long-term maintenance.</p>
+                        <ul>
+                            <li>Theme development</li>
+                            <li>Plugin development</li>
+                            <li>ACF &amp; custom fields</li>
+                            <li>Auth &amp; dashboards</li>
+                        </ul>
+                    </article>
+
+                    <article class="capability-card reveal">
+                        <span>02</span>
+                        <h3>Shopify &amp; eCommerce</h3>
+                        <p>CRO-aware storefronts in Liquid with custom templates, refined product pages, collection
+                            flows, and checkout integrations built for smoother buying journeys.</p>
+                        <ul>
+                            <li>Shopify Liquid</li>
+                            <li>WooCommerce</li>
+                            <li>Custom templates</li>
+                            <li>Checkout integrations</li>
+                        </ul>
+                    </article>
+
+                    <article class="capability-card reveal">
+                        <span>03</span>
+                        <h3>Figma &amp; AI Mockups</h3>
+                        <p>Website wireframes, section concepts, and AI-assisted visual mockups that help clients see
+                            the direction clearly before development begins.</p>
+                        <ul>
+                            <li>Figma wireframes</li>
+                            <li>AI website mockups</li>
+                            <li>UI concepts</li>
+                            <li>Client presentation</li>
+                        </ul>
+                    </article>
+
+                    <article class="capability-card reveal">
+                        <span>04</span>
+                        <h3>Deployment &amp; Hosting</h3>
+                        <p>Production support across WHM/cPanel, deployment, account setup, SSL, domain configuration,
+                            hosting coordination, and ongoing AMC maintenance.</p>
+                        <ul>
+                            <li>WHM / cPanel</li>
+                            <li>SSL &amp; domains</li>
+                            <li>Site deployment</li>
+                            <li>AMC &amp; maintenance</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section dark-section" id="stack">
+            <div class="page-shell">
+                <div class="section-label dark-label">
+                    <span>04</span>
+                    <i></i>
+                    <p>Tech Stack</p>
+                </div>
+
+                <h2 class="section-heading reveal">The toolkit behind the systems.</h2>
+
+                <div class="stack-grid">
+                    <article class="reveal">
+                        <h3>Platforms</h3>
+                        <ul>
+                            <li>WordPress</li>
+                            <li>Shopify</li>
+                            <li>WooCommerce</li>
+                        </ul>
+                    </article>
+                    <article class="reveal">
+                        <h3>Development</h3>
+                        <ul>
+                            <li>PHP</li>
+                            <li>Shopify Liquid</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </article>
+                    <article class="reveal">
+                        <h3>Tools &amp; Builders</h3>
+                        <ul>
+                            <li>ACF</li>
+                            <li>Elementor</li>
+                            <li>Figma</li>
+                            <li>GitHub</li>
+                            <li>AI Design Tools</li>
+                            <li>Custom Plugin Development</li>
+                            <li>Custom Theme Development</li>
+                        </ul>
+                    </article>
+                    <article class="reveal">
+                        <h3>Infrastructure</h3>
+                        <ul>
+                            <li>WHM / cPanel</li>
+                            <li>SSL</li>
+                            <li>Deployment</li>
+                            <li>Hosting</li>
+                        </ul>
+                    </article>
+                    <article class="reveal">
+                        <h3>Performance</h3>
+                        <ul>
+                            <li>Technical SEO</li>
+                            <li>Programmatic SEO</li>
+                            <li>Performance Optimization</li>
+                            <li>Core Web Vitals</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-border" id="experience">
+            <div class="page-shell">
+                <div class="section-label">
+                    <span>05</span>
+                    <i></i>
+                    <p>Experience</p>
+                </div>
+
+                <div class="two-col experience-layout">
+                    <div class="reveal">
+                        <h2>Hands-on experience across agency, commerce, CMS, and production support.</h2>
+                        <p class="experience-note">
+                            Bachelor's in Computer Applications, Maharishi Dayanand University (2021-2024). English -
+                            full professional proficiency. Hindi - native.
+                        </p>
+                        <a href="karan-kr-wp-resume.pdf" download class="button button-outline resume-button">
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <ol class="timeline reveal">
+                        <li>
+                            <span></span>
+                            <div class="timeline-head">
+                                <h3>Web Developer</h3>
+                                <p>Jun 2025 - Present</p>
+                            </div>
+                            <p class="timeline-org">DI Infotech Pvt Ltd <b>New Delhi</b></p>
+                            <ul>
+                                <li>Customizing Shopify stores with Liquid development for active client storefronts.
+                                </li>
+                                <li>Building and maintaining WordPress/PHP websites with custom functionality and AMC
+                                    support.</li>
+                                <li>Managing WHM/cPanel operations including deployment, SSL, domains, and client
+                                    hosting.</li>
+                                <li>Creating Figma wireframes and AI-assisted website mockups that clients approved and
+                                    converted into live builds.</li>
+                                <li>Leading bespoke website sections such as the WDC India interactive hero, using
+                                    hotspot-based navigation to turn brand storytelling into a guided web experience.
+                                </li>
+                            </ul>
+                            <div class="timeline-work-strip">
+                                <span>Project footprint</span>
+                                <div class="timeline-marquee" aria-label="DI Infotech project names">
+                                    <div>
+                                        <a href="https://wdcindia.com/" target="_blank" rel="noreferrer">WDC India</a>
+                                        <a href="https://blluex.com/" target="_blank" rel="noreferrer">BLLUEX</a>
+                                        <a href="https://womancart.com.au/" target="_blank" rel="noreferrer">Womancart
+                                            Australia</a>
+                                        <a href="https://fiponline.org/" target="_blank" rel="noreferrer">FIPOnline</a>
+                                        <a href="https://beetel.in/" target="_blank" rel="noreferrer">Beetel</a>
+                                        <a href="https://elanlimited.com/" target="_blank" rel="noreferrer">Elan
+                                            Limited</a>
+                                        <a href="https://flydheera.com/" target="_blank" rel="noreferrer">FlyDheera</a>
+                                        <span>Purva Bath</span>
+                                        <span>Siddharya Wellness</span>
+                                        <a href="https://divyajewellers.co.in/" target="_blank" rel="noreferrer">Divya
+                                            Jewellers</a>
+                                        <a href="https://kaziandassociates.com.au/" target="_blank"
+                                            rel="noreferrer">Kazi &amp; Associates</a>
+                                        <a href="https://sewaexpo.com/" target="_blank" rel="noreferrer">Sewa Expo</a>
+                                        <a href="https://www.dekodeglobal.com/" target="_blank" rel="noreferrer">Dekode
+                                            Global</a>
+                                        <a href="https://diinfotech.com/" target="_blank" rel="noreferrer">DI
+                                            Infotech</a>
+                                        <a href="https://appleshinetech.com/" target="_blank" rel="noreferrer">Apple
+                                            Shine
+                                            Tech</a>
+                                        <a href="https://fatfatiya.com/" target="_blank" rel="noreferrer">Fatfatiya</a>
+                                        <a href="https://prologisfreight.com/" target="_blank" rel="noreferrer">Prologis
+                                            Freight</a>
+                                        <a href="https://dranilkumarsharma.com/" target="_blank" rel="noreferrer">Dr.
+                                            Anil Kumar Sharma</a>
+                                        <a href="https://www.ficcicascade.in/" target="_blank" rel="noreferrer">FICCI
+                                            CASCADE</a>
+                                        <a href="https://wdcindia.com/" target="_blank" rel="noreferrer">WDC India</a>
+                                        <a href="https://blluex.com/" target="_blank" rel="noreferrer">BLLUEX</a>
+                                        <a href="https://womancart.com.au/" target="_blank" rel="noreferrer">Womancart
+                                            Australia</a>
+                                        <a href="https://fiponline.org/" target="_blank" rel="noreferrer">FIPOnline</a>
+                                        <a href="https://beetel.in/" target="_blank" rel="noreferrer">Beetel</a>
+                                        <a href="https://elanlimited.com/" target="_blank" rel="noreferrer">Elan
+                                            Limited</a>
+                                        <a href="https://flydheera.com/" target="_blank" rel="noreferrer">FlyDheera</a>
+                                        <span>Purva Bath</span>
+                                        <span>Siddharya Wellness</span>
+                                        <a href="https://divyajewellers.co.in/" target="_blank" rel="noreferrer">Divya
+                                            Jewellers</a>
+                                        <a href="https://kaziandassociates.com.au/" target="_blank"
+                                            rel="noreferrer">Kazi &amp; Associates</a>
+                                        <a href="https://sewaexpo.com/" target="_blank" rel="noreferrer">Sewa Expo</a>
+                                        <a href="https://www.dekodeglobal.com/" target="_blank" rel="noreferrer">Dekode
+                                            Global</a>
+                                        <a href="https://diinfotech.com/" target="_blank" rel="noreferrer">DI
+                                            Infotech</a>
+                                        <a href="https://appleshinetech.com/" target="_blank" rel="noreferrer">Apple
+                                            Shine
+                                            Tech</a>
+                                        <a href="https://fatfatiya.com/" target="_blank" rel="noreferrer">Fatfatiya</a>
+                                        <a href="https://prologisfreight.com/" target="_blank" rel="noreferrer">Prologis
+                                            Freight</a>
+                                        <a href="https://dranilkumarsharma.com/" target="_blank" rel="noreferrer">Dr.
+                                            Anil Kumar Sharma</a>
+                                        <a href="https://www.ficcicascade.in/" target="_blank" rel="noreferrer">FICCI
+                                            CASCADE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span></span>
+                            <div class="timeline-head">
+                                <h3>WordPress Developer</h3>
+                                <p>Oct 2024 - May 2025</p>
+                            </div>
+                            <p class="timeline-org">ContentHolic <b>New Delhi</b></p>
+                            <ul>
+                                <li>Redeveloped in-house websites with improved UI, structure, and performance.</li>
+                                <li>Built client websites from brand requirements and project-specific content needs.
+                                </li>
+                                <li>Developed custom WordPress plugins for SEO and feature enhancements.</li>
+                            </ul>
+                            <div class="timeline-work-strip">
+                                <span>Project footprint</span>
+                                <div class="timeline-marquee" aria-label="ContentHolic work names">
+                                    <div>
+                                        <a href="https://aamariresorts.com/" target="_blank" rel="noreferrer">Aamari
+                                            Resorts</a>
+                                        <a href="https://kamayatattoo.com/" target="_blank" rel="noreferrer">Kamaya
+                                            Tattoo</a>
+                                        <a href="https://contentholic.com/" target="_blank"
+                                            rel="noreferrer">ContentHolic</a>
+                                        <a href="https://eduplor.in/" target="_blank" rel="noreferrer">Eduplor</a>
+                                        <a href="https://adsholic.in/" target="_blank" rel="noreferrer">AdsHolic</a>
+                                        <a href="https://brandholic.in/" target="_blank"
+                                            rel="noreferrer">BrandHolic</a>
+                                        <a href="https://consurgys.com/" target="_blank" rel="noreferrer">Consurgys</a>
+                                        <a href="https://assignmenttoday.com/" target="_blank"
+                                            rel="noreferrer">Assignment Today</a>
+                                        <a href="https://printholic.in/" target="_blank" rel="noreferrer">Printholic</a>
+                                        <a href="https://wedmate.in/" target="_blank" rel="noreferrer">WedMate</a>
+                                        <a href="https://aamariresorts.com/" target="_blank" rel="noreferrer">Aamari
+                                            Resorts</a>
+                                        <a href="https://kamayatattoo.com/" target="_blank" rel="noreferrer">Kamaya
+                                            Tattoo</a>
+                                        <a href="https://contentholic.com/" target="_blank"
+                                            rel="noreferrer">ContentHolic</a>
+                                        <a href="https://eduplor.in/" target="_blank" rel="noreferrer">Eduplor</a>
+                                        <a href="https://adsholic.in/" target="_blank" rel="noreferrer">AdsHolic</a>
+                                        <a href="https://brandholic.in/" target="_blank"
+                                            rel="noreferrer">BrandHolic</a>
+                                        <a href="https://consurgys.com/" target="_blank" rel="noreferrer">Consurgys</a>
+                                        <a href="https://assignmenttoday.com/" target="_blank"
+                                            rel="noreferrer">Assignment Today</a>
+                                        <a href="https://printholic.in/" target="_blank" rel="noreferrer">Printholic</a>
+                                        <a href="https://wedmate.in/" target="_blank" rel="noreferrer">WedMate</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span></span>
+                            <div class="timeline-head">
+                                <h3>WordPress Developer Intern</h3>
+                                <p>May 2024 - Aug 2024</p>
+                            </div>
+                            <p class="timeline-org">Brain Quest Consultancy &amp; Training <b>India</b></p>
+                            <ul>
+                                <li>Developed custom WordPress websites from scratch for government and eCommerce
+                                    clients.</li>
+                                <li>Collaborated with cross-functional teams to deliver responsive, reliable, and
+                                    content-ready websites.</li>
+                                <li>Handled varied project requirements with attention to compliance, usability, and
+                                    smooth user experience.</li>
+                            </ul>
+                            <div class="timeline-work-strip">
+                                <span>Project footprint</span>
+                                <div class="timeline-marquee" aria-label="Brain Quest work names">
+                                    <div>
+                                        <a href="https://pngseza.gov.pg/" target="_blank" rel="noreferrer">PNG SEZA</a>
+                                        <a href="https://valeryclinics.com/" target="_blank" rel="noreferrer">Valery
+                                            Clinics</a>
+                                        <span>Compliance-focused builds</span>
+                                        <span>Custom website delivery</span>
+                                        <a href="https://pngseza.gov.pg/" target="_blank" rel="noreferrer">PNG SEZA</a>
+                                        <a href="https://valeryclinics.com/" target="_blank" rel="noreferrer">Valery
+                                            Clinics</a>
+                                        <span>Compliance-focused builds</span>
+                                        <span>Custom website delivery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span></span>
+                            <div class="timeline-head">
+                                <h3>Web Developer Intern</h3>
+                                <p>Feb 2024 - Apr 2024</p>
+                            </div>
+                            <p class="timeline-org">AG Strategic <b>Gurugram, India</b></p>
+                            <ul>
+                                <li>Developed and optimized the Shopify eCommerce experience for Aasha by India Archive,
+                                    improving usability, structure, and storefront functionality.</li>
+                                <li>Worked closely with the design team to implement new features and refine the site's
+                                    visual and shopping experience.</li>
+                            </ul>
+                            <div class="timeline-work-strip">
+                                <span>Project footprint</span>
+                                <div class="timeline-marquee" aria-label="AG Strategic project names">
+                                    <div>
+                                        <a href="https://www.aashabyindiaarchive.com/" target="_blank"
+                                            rel="noreferrer">Aasha by India Archive</a>
+                                        <span>Shopify storefront optimization</span>
+                                        <span>Design-team feature implementation</span>
+                                        <a href="https://rarerootinfra.com/" target="_blank" rel="noreferrer">Rare Root
+                                            Infra</a>
+                                        <a href="https://www.aashabyindiaarchive.com/" target="_blank"
+                                            rel="noreferrer">Aasha by India Archive</a>
+                                        <span>Shopify storefront optimization</span>
+                                        <span>Design-team feature implementation</span>
+                                        <a href="https://rarerootinfra.com/" target="_blank" rel="noreferrer">Rare Root
+                                            Infra</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span></span>
+                            <div class="timeline-head">
+                                <h3>Web Developer Intern</h3>
+                                <p>Jul 2023 - Sep 2023</p>
+                            </div>
+                            <p class="timeline-org">Unusual Digital Company <b>India</b></p>
+                            <ul>
+                                <li>Created a custom WordPress plugin from scratch, strengthening my foundation in
+                                    plugin architecture and practical PHP development.</li>
+                                <li>Contributed to Shopify client projects by developing and enhancing storefront
+                                    sections and website functionality.</li>
+                                <li>Customized existing WordPress websites, gaining hands-on experience with real client
+                                    requirements and production site updates.</li>
+                            </ul>
+                            <div class="timeline-work-strip">
+                                <span>Project footprint</span>
+                                <div class="timeline-marquee" aria-label="Unusual Digital work names">
+                                    <div>
+                                        <a href="https://falcondates.com/" target="_blank" rel="noreferrer">Falcon
+                                            Dates</a>
+                                        <a href="https://unusualdigital.com/" target="_blank" rel="noreferrer">Unusual
+                                            Digital</a>
+                                        <a href="https://anextrarep.com/" target="_blank" rel="noreferrer">An Extra
+                                            Rep</a>
+                                        <a href="https://rankbloggers.com/" target="_blank"
+                                            rel="noreferrer">RankBloggers</a>
+                                        <span>Custom WordPress Plugin Development</span>
+                                        <span>WordPress Website Customization</span>
+                                        <a href="https://falcondates.com/" target="_blank" rel="noreferrer">Falcon
+                                            Dates</a>
+                                        <a href="https://unusualdigital.com/" target="_blank" rel="noreferrer">Unusual
+                                            Digital</a>
+                                        <a href="https://anextrarep.com/" target="_blank" rel="noreferrer">An Extra
+                                            Rep</a>
+                                        <a href="https://rankbloggers.com/" target="_blank"
+                                            rel="noreferrer">RankBloggers</a>
+                                        <span>Custom WordPress Plugin Development</span>
+                                        <span>WordPress Website Customization</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="section process-section" id="process">
+            <div class="page-shell">
+                <div class="section-label">
+                    <span>06</span>
+                    <i></i>
+                    <p>Process</p>
+                </div>
+
+                <div class="process-grid">
+                    <article class="reveal">
+                        <strong>01</strong>
+                        <h3>Discover</h3>
+                        <p>Understand the business goal, audience, content needs, and what the website must enable.</p>
+                    </article>
+                    <article class="reveal">
+                        <strong>02</strong>
+                        <h3>Architect</h3>
+                        <p>Map page structure, CMS fields, commerce flows, integrations, and the development plan.</p>
+                    </article>
+                    <article class="reveal">
+                        <strong>03</strong>
+                        <h3>Build</h3>
+                        <p>Develop custom WordPress or Shopify components with clean frontend and practical backend
+                            control.</p>
+                    </article>
+                    <article class="reveal">
+                        <strong>04</strong>
+                        <h3>Launch &amp; Support</h3>
+                        <p>Deploy, secure, optimize, test critical flows, and support the website after launch.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="page-shell">
+                <div class="section-label dark-label">
+                    <span>07</span>
+                    <i></i>
+                    <p>Contact</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-copy reveal">
+                        <h2>Let's build<br>something that <em>performs.</em></h2>
+                        <p>
+                            If you need a WordPress platform, Shopify store, website revamp, custom feature, or
+                            production support, share the brief and I will help turn it into a working build.
+                        </p>
+                        <a href="mailto:kumarkaran02175@gmail.com" class="email-button">
+                            kumarkaran02175@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="contact-panel reveal">
+                        <div class="contact-links">
+                            <a href="mailto:kumarkaran02175@gmail.com">
+                                <span>Email</span>
+                                <b>kumarkaran02175@gmail.com</b>
+                            </a>
+                            <a href="tel:+919310168682">
+                                <span>Phone</span>
+                                <b>+91 93101 68682</b>
+                            </a>
+                            <a href="https://karankr.netlify.app" target="_blank" rel="noreferrer">
+                                <span>Portfolio</span>
+                                <b>karankr.netlify.app</b>
+                            </a>
+                            <a href="https://linkedin.com/in/karan-kumar-947817206" target="_blank" rel="noreferrer">
+                                <span>LinkedIn</span>
+                                <b>karan-kumar-947817206</b>
+                            </a>
+                            <a href="https://github.com/kumarkaran-kk" target="_blank" rel="noreferrer">
+                                <span>GitHub</span>
+                                <b>kumarkaran-kk</b>
+                            </a>
+                            <a>
+                                <span>Location</span>
+                                <b>New Delhi, India</b>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="right-section">
-                    <form onsubmit="emailSend(); return false;">
-                        <div class="form-group">
-                            <label for="name">What's your name:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="email">And your email address?</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">And your phone number?</label>
-                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"
-                                title="Enter a valid 10-digit phone number">
-                        </div>
-
-                        <!-- <div class="form-group">
-                            <label for="subject">Subject:</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div> -->
-
-                        <div class="form-group">
-                            <label for="message">How can I help?</label>
-                            <textarea id="message" name="message" rows="6" maxlength="1000" required></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btn btn-primary" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                <footer class="footer-note">
+                    <span>&copy; 2026 Karan Kumar - Web Developer</span>
+                    <span>Built as a system, not a template.</span>
+                </footer>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <script>
-        window.addEventListener('resize', function () {
-            var textElement = document.getElementById('myText');
-            if (window.innerWidth <= 767) {
-                textElement.setAttribute('x', '35%');
-            } else {
-                textElement.setAttribute('x', '25%');
-            }
-        });
-        window.dispatchEvent(new Event('resize'));
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var scrollToContactButton = document.getElementById("scrollToContact");
-            var getInTouchSection = document.querySelector(".get-in-touch");
-
-            scrollToContactButton.addEventListener("click", function () {
-                getInTouchSection.scrollIntoView({ behavior: "smooth" });
-            });
-        });
-    </script>
-    <!-- GSAP, Scroll, etc (no issue here) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- SweetAlert MUST be loaded before your script -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <!-- EmailJS MUST be loaded before your script -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        emailjs.init({
-            publicKey: "QbahimZpuaCG8xtt6"
-        });
-
-    </script>
-
-    <!-- NOW load your form email JS -->
-    <script src="Contact-form-to-email.js"></script>
-
-    <!-- Last load your theme script -->
     <script src="script.js"></script>
-
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-
 </body>
-
-<footer class="main-footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="left-content">
-                <!-- <p>&#9426; Copyright 2024. All rights reserved.</p> -->
-                <p>You can find me a little less on social,<br>But if you want you can also contact me on</p>
-            </div>
-            <div class="right-content">
-                <div class="footer-social">
-                    <!-- Social media icons or links -->
-                    <a href="https://www.linkedin.com/in/karan-kumar-947817206/" target="_blank">
-                        <img class="social-icon" src="/Images/icons8-linkedin.gif" alt="LinkedIn" title="LinkedIn">
-                    </a>
-                    <a href="https://twitter.com/kumarkaran_kk" target="_blank">
-                        <img class="social-icon" src="/Images/icons8-twitterx-50.png" alt="Twitter" title="Twitter">
-                    </a>
-                    <a href="https://github.com/kumarkaran-kk" target="_blank">
-                        <img class="social-icon" src="/Images/icons8-github.gif" alt="Git" title="Github">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </html>
